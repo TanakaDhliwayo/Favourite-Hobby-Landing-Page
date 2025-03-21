@@ -9,7 +9,6 @@
       body {
         margin: 0;
         font-family: "Arial", sans-serif;
-        background-color: #d2bfa8;
         background-image: url("media/Concours Of Elegance _ A glorious, 1 of 29, alloy….jpeg");
         color: #121212;
         text-align: center;
@@ -91,7 +90,13 @@
       .models {
         padding: 50px 20px;
       }
-
+      .model-car {
+        transition: all 150ms ease-in-out;
+      }
+      .model-car:hover {
+        filter: contrast(80%);
+        transform: scale(1.5);
+      }
       .model-grid {
         display: flex;
         justify-content: center;
@@ -125,19 +130,28 @@
 
       .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         padding: 20px;
       }
 
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Space between images */
+        justify-content: center;
+      }
+
       .gallery img {
-        width: 100%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
         border-radius: 10px;
       }
 
       /* Footer */
       footer {
-        background: #000;
+        background: #af3264;
         padding: 20px;
         font-size: 0.9rem;
       }
@@ -177,6 +191,7 @@
               src="media/1Mercedes SL280.jpeg"
               alt="Mercedes SL280"
               width="300px"
+              class="model-car"
             />
             <h3>Mercedes SL280</h3>
             <p>A rare classic with sleek design and innovative engineering.</p>
@@ -187,6 +202,7 @@
               src="media/Mercedes 190SL.jpeg"
               alt="Mercedes SL280"
               width="300px"
+              class="model-car"
             />
             <h3>Mercedes SL180</h3>
             <p>
@@ -200,6 +216,7 @@
               src="media/Mercedes 300SL Gullwing.jpeg"
               alt="Mercedes 300SL"
               width="300px"
+              class="model-car"
             />
             <h3>Mercedes 300SL Gullwing</h3>
             <p>The legendary "Gullwing" with unique upward-opening doors.</p>
