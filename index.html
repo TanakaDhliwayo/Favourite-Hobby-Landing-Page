@@ -155,6 +155,19 @@
         padding: 20px;
         font-size: 0.9rem;
       }
+
+      .darkMode {
+        background: linear-gradient(
+          135.8deg,
+          rgb(26, 26, 29) 27.1%,
+          rgb(111, 34, 50) 77.5%
+        );
+        color: whitesmoke;
+      }
+
+      .darkMode .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
     </style>
   </head>
   <body>
@@ -286,5 +299,19 @@
     <footer>
       <p>Made with ❤️ by Tanaka | 2025</p>
     </footer>
+    <script>
+      function ChangeTheme() {
+        let body = document.querySelector("body");
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("darkMode")) {
+          body.classList.remove("darkMode");
+        } else {
+          body.classList.add("darkMode");
+        }
+      }
+      let themeButoon = document.querySelector(".ChangeTheme");
+      themeButoon.addEventListener("click", ChangeTheme);
+    </script>
   </body>
 </html>
