@@ -4,122 +4,267 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classic Car Enthusiast</title>
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #d2bfa8;
+        background-image: url("media/Concours Of Elegance _ A glorious, 1 of 29, alloy….jpeg");
+        color: #121212;
+        text-align: center;
+        background-size: cover; /* Ensures it fills the screen */
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .ChangeTheme {
+        background: #af3264;
+        color: #121212;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .btn:hover {
+        background: plum;
+        cursor: pointer;
+      }
+
+      .ChangeTheme:hover {
+        background: plum;
+        cursor: pointer;
+      }
+      .container {
+        background-color: #5f4444;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("vintage-car-bg.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        color: #af3264;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+
+      .btn {
+        background: #af3264;
+        color: #121212;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #af3264;
+      }
+
+      /* About Section */
+      .about {
+        padding: 50px 20px;
+        background: #ffbbbb;
+      }
+
+      /* Models Section */
+      .models {
+        padding: 50px 20px;
+      }
+
+      .model-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .model {
+        background: #ffbbbb;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+      }
+
+      .model img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .model h3 {
+        color: #af3264;
+        margin-top: 10px;
+      }
+
+      /* Gallery */
+      .gallery {
+        padding: 50px 20px;
+        background: #ffbbbb;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Footer */
+      footer {
+        background: #000;
+        padding: 20px;
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
-    <button>Dark Theme</button>
-    <header>
-      <h1>🚗 Timeless Elegance</h1>
-      <p>Exploring the beauty, history, and legacy of classic automobiles.</p>
-    </header>
-
-    <section id="about" class="about">
-      <div class="about-content">
-        <h2>Why Classic Cars?</h2>
+    <button class="ChangeTheme">Dark Theme</button>
+    <div class="container">
+      <header>
+        <h1>Timeless Elegance</h1>
         <p>
-          Vintage cars represent more than just transportation; they are pieces
-          of history, engineering marvels, and symbols of timeless design. My
-          fascination with classic Mercedes models like the SL180 and 190SL
-          comes from their elegance and innovation.
+          <em
+            >Exploring the beauty, history, and legacy of classic
+            automobiles.</em
+          >
         </p>
-      </div>
-      <a href="#about" class="btn">Explore More</a>
-    </section>
+      </header>
 
-    <section id="models" class="models">
-      <h2>Iconic Mercedes Models</h2>
-      <div class="model-grid">
-        <div class="model">
-          <img
-            src="media/1Mercedes SL280.jpeg"
-            alt="Mercedes SL280"
-            width="300px"
-          />
-          <h3>Mercedes SL280</h3>
-          <p>A rare classic with sleek design and innovative engineering.</p>
-        </div>
-
-        <div class="model">
-          <img
-            src="media/Mercedes 190SL.jpeg"
-            alt="Mercedes SL280"
-            width="300px"
-          />
-          <h3>Mercedes SL180</h3>
+      <section id="about" class="about">
+        <div class="about-content">
+          <h2>Why Classic Cars?</h2>
           <p>
-            A stylish roadster from the 1950s, known for its elegance and smooth
-            drive.
+            Vintage cars represent more than just transportation; they are
+            pieces of history, engineering marvels, and symbols of timeless
+            design. My fascination with classic Mercedes models like the SL180
+            and 190SL comes from their elegance and innovation.
           </p>
         </div>
+        <a href="#about" class="btn">Explore More</a>
+      </section>
 
-        <div class="model">
+      <section id="models" class="models">
+        <h2>Iconic Mercedes Models</h2>
+        <div class="model-grid">
+          <div class="model">
+            <img
+              src="media/1Mercedes SL280.jpeg"
+              alt="Mercedes SL280"
+              width="300px"
+            />
+            <h3>Mercedes SL280</h3>
+            <p>A rare classic with sleek design and innovative engineering.</p>
+          </div>
+
+          <div class="model">
+            <img
+              src="media/Mercedes 190SL.jpeg"
+              alt="Mercedes SL280"
+              width="300px"
+            />
+            <h3>Mercedes SL180</h3>
+            <p>
+              A stylish roadster from the 1950s, known for its elegance and
+              smooth drive.
+            </p>
+          </div>
+
+          <div class="model">
+            <img
+              src="media/Mercedes 300SL Gullwing.jpeg"
+              alt="Mercedes 300SL"
+              width="300px"
+            />
+            <h3>Mercedes 300SL Gullwing</h3>
+            <p>The legendary "Gullwing" with unique upward-opening doors.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <img
+            src="media/ Mercedes SL280.jpeg"
+            alt="Classic Car 1"
+            width="100px"
+          />
+          <img
+            src="media/1Mercedes 190SL.jpg"
+            alt="Classic Car 2"
+            width="100px"
+          />
+          <img
+            src="media/1Mercedes 300 SL Gullwing.jpeg"
+            alt="Classic Car 3"
+            width="100px"
+          />
+          <img
+            src="media/1Mercedes SL280.jpeg"
+            alt="Classic Car 4"
+            width="100px"
+          />
+          <img
+            src="media/3a5de30d-b48a-4ab7-9099-ade8c5e2264c.jpeg"
+            alt="Classic Car 5"
+            width="100px"
+          />
+          <img
+            src="media/Concours Of Elegance _ A glorious, 1 of 29, alloy….jpeg"
+            alt="Classic Car 6"
+            width="100px"
+          />
+          <img
+            src="media/d941dde8-6967-4068-bfb4-a358fa95d6f4.jpeg"
+            alt="Classic Car 7"
+            width="100px"
+          />
+          <img
+            src="media/Mercedes 190SL.jpeg"
+            alt="Classic Car 8"
+            width="100px"
+          />
           <img
             src="media/Mercedes 300SL Gullwing.jpeg"
-            alt="Mercedes 300SL"
-            width="300px"
+            alt="Classic Car 9"
+            width="100px"
           />
-          <h3>Mercedes 300SL Gullwing</h3>
-          <p>The legendary "Gullwing" with unique upward-opening doors.</p>
+          <img
+            src="media/Mercedes Benz 280 SL Pagode - 1971.jpeg"
+            alt="Classic Car 10"
+            width="100px"
+          />
+          <img src="media/Mercedes.jpg" alt="Classic Car 11" width="100px" />
+          <img src="media/Mercedes1.jpg" alt="Classic Car 12" width="100px" />
         </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img
-          src="media/ Mercedes SL280.jpeg"
-          alt="Classic Car 1"
-          width="100px"
-        />
-        <img
-          src="media/1Mercedes 190SL.jpg"
-          alt="Classic Car 2"
-          width="100px"
-        />
-        <img
-          src="media/1Mercedes 300 SL Gullwing.jpeg"
-          alt="Classic Car 3"
-          width="100px"
-        />
-        <img
-          src="media/1Mercedes SL280.jpeg"
-          alt="Classic Car 4"
-          width="100px"
-        />
-        <img
-          src="media/3a5de30d-b48a-4ab7-9099-ade8c5e2264c.jpeg"
-          alt="Classic Car 5"
-          width="100px"
-        />
-        <img
-          src="media/Concours Of Elegance _ A glorious, 1 of 29, alloy….jpeg"
-          alt="Classic Car 6"
-          width="100px"
-        />
-        <img
-          src="media/d941dde8-6967-4068-bfb4-a358fa95d6f4.jpeg"
-          alt="Classic Car 7"
-          width="100px"
-        />
-        <img
-          src="media/Mercedes 190SL.jpeg"
-          alt="Classic Car 8"
-          width="100px"
-        />
-        <img
-          src="media/Mercedes 300SL Gullwing.jpeg"
-          alt="Classic Car 9"
-          width="100px"
-        />
-        <img
-          src="media/Mercedes Benz 280 SL Pagode - 1971.jpeg"
-          alt="Classic Car 10"
-          width="100px"
-        />
-        <img src="media/Mercedes.jpg" alt="Classic Car 11" width="100px" />
-        <img src="media/Mercedes1.jpg" alt="Classic Car 12" width="100px" />
-      </div>
-    </section>
+      </section>
+    </div>
 
     <footer>
       <p>Made with ❤️ by Tanaka | 2025</p>
